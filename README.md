@@ -13,10 +13,10 @@ ONLY TEST IN Win10-18362/3 and Win10-19041/5, using other version of windows may
 ## Limitations
 Some exception in kernel such as excuting NX pages and write to read only memory are not be able to catch by kdtrap and therefore won't goes into our handler. 
   
-For executing NX page in kernel: 
+For executing NX page in kernel:  
 KiPageFault->MmAccessFault->MiSystemFault->MiCheckSystemNxFault->BugCheck 
   
-For write to read only pages in kernel: 
+For write to read only pages in kernel:  
 KiPageFault->MmAccessFault->MiSystemFault->BugCheck 
 
 
