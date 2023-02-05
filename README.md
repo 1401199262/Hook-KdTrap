@@ -96,5 +96,5 @@ Exception in PatchGuard routine:
 [DarkCode](https://github.com/Rythorndoran) for helping in setup qemu debug  
 [busy10](https://www.unknowncheats.me/forum/anti-cheat-bypass/500156-hook-kdtrap-windows-global-exception-hander.html) for pattern search functions  
 [DemonJames](https://git.back.engineering/DemonJames) for helping in exception handling  
-
+eac for the idea (maybe)  
 

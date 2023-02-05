@@ -445,8 +445,11 @@ extern"C" void ExceptionHandler(PEXCEPTION_RECORD ExceptionRecord, PCONTEXT Cont
 			{
 				if (*(u64*)(stack_current) > KdTrap && *(u64*)(stack_current)-KdTrap < 0x50)
 				{
-					ReturnCtx.RBX = *(u64*)((u64)stack_current + 8);
-					bRbxFound = true;
+					if (MmIsAddressValid(*(pv*)((u64)stack_current + 8)))
+					{
+						ReturnCtx.RBX = *(u64*)((u64)stack_current + 8);
+						bRbxFound = true;
+					}
 				}
 				return FALSE;
 			}
