@@ -9,15 +9,14 @@ HookKdtrap modifies HalpStallCounter and other variables to take over control fl
 Set NtGlobalFlag to 1 will catch global exception, normal system will crash if you set NtGlobalFlag to 1.  
 ![Result1](/pic/18362.png)
   
+## How to build
+Open .sln file, choose debug-x64 and press build. 
+  
 ## BSOD
 ![WhatHappen](/pic/how.jpg)  
 The exported "DbgCtx" variable is useful for debugging, but using a actual debugger is more helpful for debug.  
 Setting up [Qemu+Windbg](https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/setting-up-qemu-kernel-mode-debugging-using-exdi#download-and-install-qemu-on-windows) so that the debugger can step through/in KdTrap  
 
-
-## How to build
-Open .sln file, choose debug-x64 and press build. 
-  
 ## Compatibility
 ONLY TEST IN Win10-18362/3 and Win10-19041/5, using other version of windows may leads to unexpected behaviour! 
   
@@ -25,10 +24,10 @@ ONLY TEST IN Win10-18362/3 and Win10-19041/5, using other version of windows may
 Some exception in kernel such as excuting NX pages and write to read only memory are not be able to catch by kdtrap and therefore won't goes into our handler. 
   
 For executing NX page in kernel:  
-KiPageFault->MmAccessFault->MiSystemFault->MiCheckSystemNxFault->BugCheck 
+```KiPageFault->MmAccessFault->MiSystemFault->MiCheckSystemNxFault->BugCheck ```
   
 For write to read only pages in kernel:  
-KiPageFault->MmAccessFault->MiSystemFault->BugCheck 
+```KiPageFault->MmAccessFault->MiSystemFault->BugCheck ```
 
 
 ## Some Test
