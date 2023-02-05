@@ -22,7 +22,7 @@ Open .sln file, choose debug-x64 and press build.
 ## BSOD
 ![WhatHappen](/pic/how.jpg)  
 The exported "DbgCtx" variable is useful for debugging, but using a actual debugger is more helpful for debug.  
-Setting up [Qemu+Windbg](https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/setting-up-qemu-kernel-mode-debugging-using-exdi#download-and-install-qemu-on-windows) so that the debugger can step through/in KdTrap  
+Setting up [Qemu+Windbg](https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/setting-up-qemu-kernel-mode-debugging-using-exdi) so that the debugger can step through/in KdTrap  
 
 ## Compatibility
 ONLY TEST IN Win10-18362/3 and Win10-19041/5, using other version of windows may leads to unexpected behaviour! 
@@ -41,7 +41,7 @@ HookKdtrap extensively use stack trace to gather register, different winver may 
 
 ### Sample Stack trace when exception handler get called  
 
-Inserting __debugbreak in Drivermain:  
+Inserting __debugbreak() in Drivermain:  
 ```
 00 KMDFDriver1!ExceptionHandler
 01 KMDFDriver1!HookPosition+0xa9
@@ -62,7 +62,7 @@ Inserting __debugbreak in Drivermain:
 10 nt!KiStartSystemThread+0x2a
 ```  
   
-Catching PatchGuard routine:  
+Exception in PatchGuard routine:  
 ```
 00 KMDFDriver1!HookPosition
 01 nt!KeStallExecutionProcessor + 0x120
@@ -90,4 +90,5 @@ Catching PatchGuard routine:
 
 ## Some Test
 ![Result2](/pic/19045.png)
+
 
