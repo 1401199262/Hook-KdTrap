@@ -1,8 +1,13 @@
 # Hook KdTrap -- Windows global exception handler
 
-KdTrap is the very first function get called when an exception occur, hooking it so that you have the full control of kernel. 
+KdTrap is the very first function get called when an exception occur, by hooking it, your code can gain full control of kernel. 
 
-HookKdtrap modifies HalpStallCounter and other variables to take over control flow.
+HookKdtrap modifies HalpStallCounter and other variables to take over control flow.  
+
+
+## Result
+![pic/18362.png]
+
 
 ## How to build
 Open .sln file, choose debug-x64 and press build. 
