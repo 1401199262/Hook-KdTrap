@@ -6,7 +6,8 @@ HookKdtrap modifies HalpStallCounter and other variables to take over control fl
 
 
 ## Result
-![https://github.com/1401199262/HookKdTrap/blob/master/pic/18362.png]
+![Result1](/pic/18362.png)
+![Result2](/pic/19045.png)
 
 ## How to build
 Open .sln file, choose debug-x64 and press build. 
