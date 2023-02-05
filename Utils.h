@@ -15,6 +15,9 @@ typedef unsigned short u16;
 typedef unsigned char u8;
 typedef volatile unsigned char vu8;
 #define __db __debugbreak
+#define noinl __declspec(noinline)
+#define naked __declspec(naked)
+#define inl __forceinline
 
 #define RVA(Instr, InstrSize) ((DWORD64)Instr + InstrSize + *(LONG*)((DWORD64)Instr + (InstrSize - sizeof(LONG))))
 #define RVA2(Instr, InstrSize, Off) ((DWORD64)Instr + InstrSize + *(LONG*)((DWORD64)Instr + Off))
@@ -308,7 +311,12 @@ PVOID GetProcAddress(PVOID ModBase, const char* Name);
 
 NTSTATUS WritePhysicalSafe2(DWORD64 PhysicalAddress, pv Buffer, u64 Length);
 
-
+inl void KSleep(u64 ms)
+{
+    LARGE_INTEGER delay;
+    delay.QuadPart = -1000 * ms;
+    KeDelayExecutionThread(KernelMode, TRUE, &delay);
+}
 
 ///**
 // * The 32-bit EFLAGS register contains a group of status flags, a control flag, and a group of system flags. The status

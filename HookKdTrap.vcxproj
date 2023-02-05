@@ -180,10 +180,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DriverEntry.cpp" />
+    <ClCompile Include="HookKdtrap.cpp" />
     <ClCompile Include="Utils.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DriverEntry.h" />
+    <ClInclude Include="HookKdtrap.h" />
     <ClInclude Include="Utils.h" />
   </ItemGroup>
   <ItemGroup>

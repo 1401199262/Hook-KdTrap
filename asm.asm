@@ -4,7 +4,6 @@ extern CheckCallCtx:PROC
 extern ExceptionHandler:PROC
 extern FindExceptionRecord:PROC
 extern KeBugCheck:PROC
-extern BpMe:PROC
 extern OldHalQueryCounter:dq
 
 HalpTscQueryCounterOrdered PROC
@@ -44,8 +43,9 @@ HookPosition PROC
     ; still here so it's a debug break or something
 
 dbgbreak:
-    mov rcx,0DEADC0DEh
-    call BpMe
+    xor rcx, rcx
+    call KeBugCheck
+
 filt:
     add rsp, 0E8h  
 	pop rdx
