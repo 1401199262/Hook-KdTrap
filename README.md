@@ -6,7 +6,14 @@ HookKdtrap modifies HalpStallCounter and other variables to take over control fl
 
 
 ## Result
-Set NtGlobalFlag to 1 will catch global exception, normal system will crash if you set NtGlobalFlag to 1.  
+Accessing 0 address and setting reserved bit in cr3 will normally cause a bsod, but it's safe after we use our custom exception handler  
+```
+*(vu8*)0;
+__writecr3(__readcr3() | 1ui64 << 63);
+*(vu8*)0;    
+```  
+
+Set NtGlobalFlag to 1 will catch global exception, normal system will instantly crash if NtGlobalFlag is 1.  
 ![Result1](/pic/18362.png)
   
 ## How to build
