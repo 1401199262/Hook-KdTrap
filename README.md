@@ -91,4 +91,8 @@ Exception in PatchGuard routine:
 ## Some Test
 ![Result2](/pic/19045.png)
 
+## Credit
+
+[DarkCode](https://github.com/Rythorndoran) for helping in qemu debug  
+busy10 for pattern search functions  
 
