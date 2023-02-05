@@ -10,6 +10,7 @@ Set NtGlobalFlag to 1 will catch global exception, normal system will crash if y
 ![Result1](/pic/18362.png)
   
 ## BSOD
+![WhatHappen](/pic/how.jpg)
 The exported "DbgCtx" variable is useful for debugging, but using a actual debugger is more helpful for debug.  
 Setting up [Qemu+Windbg](https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/setting-up-qemu-kernel-mode-debugging-using-exdi#download-and-install-qemu-on-windows) so that the debugger can step through/in KdTrap  
 
