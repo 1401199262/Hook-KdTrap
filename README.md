@@ -89,10 +89,12 @@ Exception in PatchGuard routine:
 ```  
 
 ## Some Test
-![Result2](/pic/19045.png)
+![Result2](/pic/19045_2.png)
 
-## Credit
+## Credit (copy from)
 
-[DarkCode](https://github.com/Rythorndoran) for helping in qemu debug  
-busy10 for pattern search functions  
+[DarkCode](https://github.com/Rythorndoran) for helping in setup qemu debug  
+[busy10](https://www.unknowncheats.me/forum/anti-cheat-bypass/500156-hook-kdtrap-windows-global-exception-hander.html) for pattern search functions  
+[DemonJames](https://git.back.engineering/DemonJames) for helping in exception handling  
+
 
