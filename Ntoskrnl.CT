@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="38">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>0</ID>
+      <Description>"NtGlobalFlag"</Description>
+      <LastState Value="00000000" RealAddress="FFFFF8070A04C040"/>
+      <ShowAsHex>1</ShowAsHex>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>ntoskrnl.NtGlobalFlag</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>1</ID>
+      <Description>"KdpDebugRoutineSelect"</Description>
+      <LastState Value="00000000" RealAddress="FFFFF8070A050A74"/>
+      <ShowAsHex>1</ShowAsHex>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>ntoskrnl.KdpDebugRoutineSelect</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>2</ID>
+      <Description>"KdDebuggerLock"</Description>
+      <LastState Value="0000000000000000" RealAddress="FFFFF8070A122280"/>
+      <ShowAsHex>1</ShowAsHex>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>8 Bytes</VariableType>
+      <Address>ntoskrnl.KdDebuggerLock</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>3</ID>
+      <Description>"HalpTscQueryCounterOrdered"</Description>
+      <LastState Value="FFFFF80709764AC0" RealAddress="FFFFF7B640001070"/>
+      <ShowAsHex>1</ShowAsHex>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>8 Bytes</VariableType>
+      <Address>ntoskrnl.HalpStallCounter</Address>
+      <Offsets>
+        <Offset>70</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>4</ID>
+      <Description>"HalpPmTimerQueryCounterIoPort"</Description>
+      <LastState Value="FFFFF807097649E0" RealAddress="FFFFF7B64021C5F0"/>
+      <ShowAsHex>1</ShowAsHex>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>8 Bytes</VariableType>
+      <Address>ntoskrnl.HalpStallCounter</Address>
+      <Offsets>
+        <Offset>70</Offset>
+        <Offset>0</Offset>
+      </Offsets>
+    </CheatEntry>
+  </CheatEntries>
+  <UserdefinedSymbols/>
+</CheatTable>
