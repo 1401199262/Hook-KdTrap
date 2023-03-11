@@ -587,10 +587,10 @@ extern"C" u64 FindExceptionRecord()
 	u64 ExceptionRecord = 0;
 
 	u64 CorruptContext = 0, CorruptR12 = 0;
-	if (GetWinver() > 18363)
-	{
-		CorruptContext = GetR13();
-	}
+	//if (GetWinver() > 18363)
+	//{
+	CorruptContext = GetR13();
+	//}
 
 	bool bFoundExceptionRecord = false;
 	bool bFoundCorruptReg = false;
@@ -675,10 +675,10 @@ extern"C" u64 FindExceptionRecord()
 		KeBugCheck(0);
 	}
 
-	if (GetWinver() > 18363)
-	{
-		SetR13(CorruptContext);
-	}
+	//if (GetWinver() > 18363)
+	//{
+	SetR13(CorruptContext);
+	//}
 
 	SetR12(CorruptR12);
 
